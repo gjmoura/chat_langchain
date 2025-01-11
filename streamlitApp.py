@@ -12,7 +12,6 @@ import os
 
 os.environ["OPENAI_API_KEY"] = "sua-chave-open-api"
 
-
 st.title("💬 Dados Abertos App")
 
 mysql_uri = 'mysql+mysqlconnector://root:12345@localhost:3307/dados_abertos'
@@ -49,7 +48,7 @@ def generate_response(input_text):
 with st.form("my_form"):
     text = st.text_area(
         "Enter text:",
-        "What are the three key pieces of advice for learning how to code?",
+        "Me faça uma pergunta",
     )
     submitted = st.form_submit_button("Submit")
     if not os.environ["OPENAI_API_KEY"].startswith("sk-"):
